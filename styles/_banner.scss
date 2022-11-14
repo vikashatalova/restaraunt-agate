@@ -1,0 +1,38 @@
+.banner {
+    padding: 219px 0 185px;
+    color: $primary-color;
+    &__title {
+        font-size: 5.3125rem;
+        margin: 0 auto 35px;
+        max-width: 914px;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        font-weight: 700;
+    }
+    &__text {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        padding: 183px 0 153px;
+        &__title {
+            font-size: 3.75rem;
+            max-width: 697px;
+        }
+        &__text {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 171px 0 99px;
+        &__title {
+            font-size: 3.125rem;
+            max-width: 329px;
+        }
+    }
+}

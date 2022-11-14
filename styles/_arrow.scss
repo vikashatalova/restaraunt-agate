@@ -1,0 +1,25 @@
+.arrow {
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+    width: 70px;
+    height: 70px;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: #FFAC1C;
+    &:hover {
+        box-shadow: 0 0 10px 0 #E54B1A inset, 0 0 10px 4px #E54B1A;
+        color: #E54B1A;
+        transition: all .8s;
+        background-color: #e97653;
+    }
+    &::after {
+        content: "";
+        background-image: url(../icons/arrow.svg);
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        width: 28px;
+        height: 12.73px;
+    }
+}

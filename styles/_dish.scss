@@ -1,0 +1,190 @@
+.dish {
+    max-width: 360px;
+    width: calc((100% - 2*48px)/3);
+    text-align: left;
+    position: relative;
+    &:not(:last-of-type) {
+        margin-right: 48px;
+    }
+    &__image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.dish__content {
+    margin-top: 35px;
+    &-headings {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    &-description {
+        font-size: 1.125rem;
+        line-height: 23px;
+        font-weight: 300;
+        color: $secondary-color;
+        margin: 15px 0;
+    }
+    &-price {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+}
+
+.dish {
+    &--red::before {
+        @include before("Hot!", #D33B3B);
+    }
+    &--green::before {
+        @include before("New!", #B3E151);
+    }
+    &--orange::before {
+        @include before("Hit!", #E5A434);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .dish {
+        max-width: 310px;
+        width: calc((100% - 2*30px)/3);
+        &:not(:last-of-type) {
+            margin-right: 30px;
+        }
+        &::before {
+            @include before1250;
+        }
+    }
+    .dish__content {
+        &-description {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .dish {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .dish {
+        max-width: 253px;
+        width: calc((100% - 2*92px)/3);
+        &:not(:last-of-type) {
+            margin-right: 92px;
+        }
+        &::before {
+            @include before1024;
+        }
+    }
+    .dish__content {
+        margin-top: 15px;
+        &-headings {
+            font-size: 1.5625rem;
+        }
+        &-description {
+            font-size: 0.93rem;
+            line-height: 19px;
+            margin: 15px 0 17px;
+        }
+        &-price {
+            font-size: 0.9375rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .dish {
+        max-width: 220px;
+        width: calc((100% - 2*42px)/3);
+        &:not(:last-of-type) {
+            margin-right: 42px;
+        }
+    }
+    .dish__content {
+        &-description {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dish {
+        max-width: 200px;
+        width: calc((100% - 2*32px)/3);
+        &:not(:last-of-type) {
+            margin-right: 32px;
+        }
+    }
+    .dish__content {
+        &-description {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dish {
+        max-width: 692px;
+        width: 100%;
+        display: flex;
+        &:not(:last-of-type) {
+            margin-right: 0;
+            margin-bottom: 58px;
+        }
+        &::before {
+            @include before768;
+        }
+        &__image {
+            max-width: 320px;
+        }
+    }
+    .dish__content {
+        text-align: left;
+        max-width: 348px;
+        padding-top: 17px;
+        margin: 0 0 0 24px;
+        &-description {
+            font-size: 1.25rem;
+            line-height: 25px;
+            margin: 20px 0;
+        }
+        &-price {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .dish {
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &:not(:last-of-type) {
+            margin-bottom: 48px;
+        }
+        &__image {
+            max-width: 300px;
+        }
+    }
+    .dish__content {
+        max-width: 300px;
+        padding: 0;
+        margin: 15px 0 0;
+        &-headings {
+            font-size: 1.25rem;
+        }
+        &-description {
+            margin: 15px 0;
+            font-size: 1.125rem;
+        }
+        &-price {
+            font-size: 1.125rem;
+        }
+    }
+}

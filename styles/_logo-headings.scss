@@ -1,0 +1,23 @@
+.logo-headings {
+    font-size: $heading-font;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo-headings {
+        font-size: 2.1275rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-headings {
+        font-size: 1.875rem;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .logo-headings {
+        font-size: 1.5625rem;
+    }
+}

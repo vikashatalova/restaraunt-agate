@@ -1,0 +1,111 @@
+.wrap {
+    padding: 100px 24px 0;
+    max-width: 1900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__element {
+        width: calc((100% - 2*24px)/2);
+        max-width: 924px;
+        &:not(:nth-of-type(2n)) {
+            margin-right: 24px;
+        }
+        &:not(:nth-of-type(n+5)) {
+            margin-bottom: 24px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .wrap {
+        padding: 100px 12px 0px;
+        &__item {
+            max-width: 696px;
+        }
+    }
+}
+
+@media screen and (max-width: 1435px) {
+    .wrap__element {
+        max-width: 610px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .wrap__element {
+        max-width: 590px;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .wrap__element {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrap {
+        padding: 80px 15px 0px;
+        &__item {
+            max-width: 492px;
+            &:not(:nth-of-type(2n)) {
+                margin-right: 10px;
+            }
+            &:not(:nth-of-type(n+5)) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .wrap__element {
+        max-width: 430px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrap__element {
+        max-width: 360px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrap {
+        padding: 70px 24px 0px;
+        &__element {
+            max-width: 354px;
+            &:not(:nth-of-type(2n)) {
+                margin-right: 12px;
+            }
+            &:not(:nth-of-type(n+5)) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .wrap__element {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .wrap {
+        padding: 60px 15px 0;
+        &__item {
+            max-width: 225px;
+        }
+    }
+}
+
+@media screen and (max-width: 505px) {
+    .wrap__element {
+        max-width: 150px;
+    }
+}
